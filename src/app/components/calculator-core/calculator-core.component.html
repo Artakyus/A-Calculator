@@ -1,0 +1,25 @@
+<div class="calculator">
+    
+    <div class="inputs">
+        <input id="numb1" type="number" [(ngModel)]="num1" placeholder=".">
+        <input id="numb2" type="number" [(ngModel)]="num2" placeholder=".">
+    </div>
+
+    <div class="operators">
+        <button (click)="sum()">+</button>
+        <button (click)="substract()">-</button>
+        <button (click)="multiply()">*</button>
+        <button (click)="divide()">/</button>
+        <button (click)="reset()" >Reset</button>
+    </div>
+    
+    <div class="result" *ngIf="seeResult">
+        <p>The result is: {{ result }}</p>
+    </div>
+
+    <div class="error" *ngIf="seeError">
+        <p>Error: {{ errorText }}</p>
+    </div>
+    
+
+</div>
